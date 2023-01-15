@@ -62,59 +62,59 @@ const Sidebar = () => {
     >
       <Sidebar collapsed={isCollapsed}>
         <Menu iconShape="square">
-          {/* LOGO AND MENU ICON */}
-          <MenuItem
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
-            style={{ margin: "10px 0 20px 0", color: colors.grey[100] }}
+      {/* LOGO AND MENU ICON */}
+      <MenuItem
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+        style={{ margin: "10px 0 20px 0", color: colors.grey[100] }}
+      >
+        {!isCollapsed && (
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            ml="15px"
           >
-            {!isCollapsed && (
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                ml="15px"
-              >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
-                </Typography>
-                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuOutlinedIcon />
-                </IconButton>
-              </Box>
-            )}
-          </MenuItem>
+            <Typography variant="h3" color={colors.grey[100]}>
+              ADMINIS
+            </Typography>
+            <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+              <MenuOutlinedIcon />
+            </IconButton>
+          </Box>
+        )}
+      </MenuItem>
 
-          {/* USER */}
-          {!isCollapsed && (
-            <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
-                <img
-                  alt="profile-user"
-                  width="100px"
-                  height="100px"
-                  src={"#"}
-                  style={{ cursor: "pointer", borderRadius: "50%" }}
-                />
-              </Box>
-              <Box textAlign="center">
-                <Typography
-                  variant="h2"
-                  colors={colors.grey[100]}
-                  fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
-                >
-                  Sherwinlove Bernardino
-                </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Funemployed
-                </Typography>
-              </Box>
-            </Box>
-          )}
+      {/* USER */}
+      {/* {!isCollapsed && (
+        <Box mb="25px">
+          <Box display="flex" justifyContent="center" alignItems="center">
+            <img
+              alt="profile-user"
+              width="100px"
+              height="100px"
+              src={"#"}
+              style={{ cursor: "pointer", borderRadius: "50%" }}
+            />
+          </Box>
+          <Box textAlign="center">
+            <Typography
+              variant="h2"
+              colors={colors.grey[100]}
+              fontWeight="bold"
+              sx={{ m: "10px 0 0 0" }}
+            >
+              Sherwinlove Bernardino
+            </Typography>
+            <Typography variant="h5" color={colors.greenAccent[500]}>
+              Funemployed
+            </Typography>
+          </Box>
+        </Box>
+      )} */}
 
-          {/* MENU ITEMS */}
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+      {/* MENU ITEMS */}
+      {/* <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"
               to="/"
@@ -192,8 +192,8 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-          </Box>
-        </Menu>
+          </Box> */}
+      </Menu>
       </Sidebar>
     </Box>
   );
